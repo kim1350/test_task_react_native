@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import NavigateSatck from "./navigate";
+import { StatusBar } from "expo-status-bar";
+import YaMap from "react-native-yamap";
 
 export default function App() {
+  YaMap.init("2615293c-9206-4679-8a7e-d98bf289bf38");
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <NavigateSatck />
+      <StatusBar hidden={true} />
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
